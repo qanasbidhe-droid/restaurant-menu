@@ -1,19 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Restaurant Menu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Menu</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+header{
+    background:#8B0000;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+header h1{
+    font-size:40px;
+}
+
+.menu{
+    max-width:1200px;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.info{
+    padding:20px;
+}
+
+.info h2{
+    margin-bottom:10px;
+    color:#333;
+}
+
+.price{
+    font-size:24px;
+    color:#8B0000;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#222;
+    color:white;
+    margin-top:30px;
+}
+</style>
 </head>
+
 <body>
-  <h1>Our Menu</h1>
 
-  <div>
-    <h2>Burger</h2>
-    <p>Price: $5</p>
-  </div>
+<header>
+    <h1>🍽 Restaurant Menu</h1>
+    <p>Welcome to our restaurant</p>
+</header>
 
-  <div>
-    <h2>Pizza</h2>
-    <p>Price: $7</p>
-  </div>
+<div class="menu">
+
+    <div class="card">
+        <img src="hen.jpg" alt="Hen">
+        <div class="info">
+            <h2>Hen</h2>
+            <div class="price">8,000 IQD</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="meat.jpg" alt="Meat">
+        <div class="info">
+            <h2>Meat</h2>
+            <div class="price">15,000 IQD</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="kabab.jpg" alt="Kabab">
+        <div class="info">
+            <h2>Kabab</h2>
+            <div class="price">12,000 IQD</div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Restaurant Menu
+</footer>
+
 </body>
 </html>
